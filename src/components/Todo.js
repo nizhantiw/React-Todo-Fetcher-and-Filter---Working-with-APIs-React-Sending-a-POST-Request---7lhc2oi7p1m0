@@ -1,20 +1,10 @@
 import React from 'react';
 
-export const Todo = (e) => {
-    return (
-        <div>
-            <ul>
-                <li>
-                    <div className='todo' id={`todo-${e.id}`}>
-                        <div className='todo-title'>
-                            {e.title}
-                        </div>
-                        <div className='todo-status'>
-                            {e.completed ? "Completed" : "InCompleted"}
-                        </div>
-                    </div>
-                </li>
-            </ul>
+ export const Todo  = ({id, title, completed}) =>{
+    return(
+        <div id={`todo-${id}`} className='todo'>
+            <div className='todo-text'>{title}</div>
+            <div className='todo-status'>{completed ? "Complete" : "Incomplete"}</div>
         </div>
     )
-}
+ }
